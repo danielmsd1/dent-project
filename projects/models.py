@@ -13,19 +13,13 @@ class Sketch(models.Model):
 	project = models.ForeignKey(Project, on_delete=models.CASCADE)
 	image = models.ImageField(upload_to='images/')
 
-	def __str__(self):
-		return self.project
-
 class Image(models.Model):
 	project = models.ForeignKey(Project, on_delete=models.CASCADE)
 	image = models.ImageField(upload_to='images/')
-
-	def __str__(self):
-		return self.project
 
 class Video(models.Model):
 	project = models.ForeignKey(Project, on_delete=models.CASCADE)
 	code = models.CharField(max_length=200)
 
 	def __str__(self):
-		return self.project
+		return self.code
