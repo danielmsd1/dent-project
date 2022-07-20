@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dentcreatives',
     'projects',
-    'careers'
+    'careers',
+    'team',
 ]
 
 MIDDLEWARE = [
