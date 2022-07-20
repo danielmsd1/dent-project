@@ -7,9 +7,15 @@ class Program(models.Model):
 	duration = models.CharField(max_length=200)
 	cover_image = models.ImageField(upload_to='images/')
 
+	def __str__(self):
+		return self.name
+
 
 class Instructor(models.Model):
 	program = models.ForeignKey(Program, on_delete=models.CASCADE)
 	name = models.CharField(max_length=200)
 	profile_image = models.ImageField(upload_to='images/')
 	bio = models.TextField()
+
+	def __str__(self):
+		return self.name
