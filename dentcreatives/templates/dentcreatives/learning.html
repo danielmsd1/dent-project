@@ -1,0 +1,246 @@
+{% load static %}
+
+<!-- The Header start -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dent Creatives</title>
+	<link rel="shortcut icon" href="{% static 'images/denticon.svg' %}" type="image/x-icon">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/734ca1f035.js" crossorigin="anonymous"></script>
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="{% static 'images/dentcreativeslogo.svg' %}" alt="dentcreativeslogo" height="45px">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="#">Portfolio</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Services
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Graphic Design</a></li>
+							<li><a class="dropdown-item" href="#">Motion Graphics</a></li>
+							<li><a class="dropdown-item" href="#">Training</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Careers</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Get Quotation</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- The Header end -->
+
+	<section id="portfolio-cvr">
+		<h2 class="about-txt-hr">Training</h2>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6">
+					<strong>Nodejs Zero to Expert</strong>
+					<hr>
+					<div class="project-details">
+						Program Fee: $20 <br> Duration: 3 Months
+					</div>
+					<p class="project-description">
+
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc ipsum, euismod in volutpat
+						et, rutrum eget libero. Pellentesque non lorem eu felis consectetur dictum suscipit eget libero.
+						In sit amet tristique nibh. Praesent malesuada dui in augue rhoncus faucibus. Aliquam consequat
+						justo sit amet felis aliquam, volutpat tempus risus iaculis. Fusce sagittis vitae elit et
+						commodo. Fusce eu tellus dictum, aliquam lectus efficitur, sollicitudin lacus.
+						<br>
+						<button class="about-btn home-cvr-btn btn btn-secondary">Start Learning</button>
+						<br>
+
+					</p>
+					<strong>Instructors[5]</strong>
+					<div class="project-sketch-ctr">
+
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-lg-12">
+									<img src="https://images.unsplash.com/photo-1657642106373-aac1e710c6db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+										alt="PortfolioAvatar" class="portfolio-img-instructor">
+									<br>
+
+									<strong>Daniel Simiyu</strong>
+									<p class="learning-inst-description">
+										Software Developer at Herufi, Inc.
+									</p>
+								</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="portfolio-ctr-logo">
+						<img src="images/dentcreativeslogo.svg" alt="PortfolioAvatar" class="portfolio-img">
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+						<!-- Contact start -->
+	<section id="quotation-cvr">
+		<h2 class="about-txt-hr">Contact Us</h2>
+	
+		<form class="quotation-form" action="" method="post">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6">
+						<label for="name"></label>
+						<input class="form-control" type="text" name="name" id="" placeholder="Your Name*" required>
+					</div>
+					<div class="col-lg-6">
+						<label for="emailAddress"></label>
+						<input class="form-control" type="email" name="emailAddress" id="" placeholder="Email Address*"
+							required>
+					</div>
+					<div class="col-lg-12">
+						<div class="input-group">
+							<select class=" form-control" id="inputGroupSelect04">
+								<!-- <option selected>How can we help? <i class="fa-solid fa-circle-chevron-down"></i> -->
+								<!-- </option> -->
+								<option value="1">Graphic Design</option>
+								<option value="2">Motion Graphics</option>
+								<option value="3">Training</option>
+								<option value="3">Other</option>
+							</select>
+						</div>
+					</div>
+	
+					<div class="col-lg-12">
+						<label for="detail"></label>
+						<textarea class="form-control" name="detail" id="" cols="30" rows="10"
+							placeholder="Additional detail, website, etc" required></textarea>
+	
+	
+						<button type="submit" class="contact-btn home-cvr-btn btn btn-secondary">Contact Us</button>
+					</div>
+	
+				</div>
+			</div>
+		</form>
+	
+	</section>
+<!-- Contact end -->
+
+	</section>
+
+
+	<style>
+		.portfolio-ctr {
+			border: 2px solid;
+			margin-bottom: 5px;
+		}
+
+		.project-details {
+			border: 2px solid;
+			border-radius: 10px;
+			background-color: #168d6d;
+			color: #ffffff;
+			padding: 3px;
+		}
+
+		.project-sketch-ctr {
+			width: 100%;
+			/* border-radius: 100px; */
+		}
+
+		.portfolio-img-instructor {
+			height: 300px;
+			/* width: 300px; */
+			padding: 10px;
+			border-radius: 20px;
+			border: 2px solid;
+		}
+
+		.portfolio-ctr-logo {
+			padding: 10px;
+			border-radius: 15px 5px;
+			border: 2px 0 0 1px;
+		}
+		.learning-inst-description{
+			/* text-align: left; */
+			background-color: #233343;
+			color: #ffffff;
+			padding: 10px;
+			border-radius: 10px;
+		}
+	</style>
+
+<!-- Footer start -->
+<footer class="py-3 my-4">
+	<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Facebook</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Instagram</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Twitter</a></li>
+	</ul>
+	<p class="text-center text-muted">© 2022 DENT CREATIVES, Inc</p>
+</footer>
+
+<!-- Bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+	crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+	$('.nav-link').mouseover(function () {
+		$('.nav-link').addClass('active');
+	});
+</script>
+
+</body>
+
+</html>
+<!-- Footer end -->

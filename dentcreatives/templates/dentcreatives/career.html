@@ -1,0 +1,143 @@
+{% load static %}
+
+<!-- The Header start -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dent Creatives</title>
+	<link rel="shortcut icon" href="{% static 'images/denticon.svg' %}" type="image/x-icon">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/734ca1f035.js" crossorigin="anonymous"></script>
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="{% static 'images/dentcreativeslogo.svg' %}" alt="dentcreativeslogo" height="45px">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="#">Portfolio</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Services
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Graphic Design</a></li>
+							<li><a class="dropdown-item" href="#">Motion Graphics</a></li>
+							<li><a class="dropdown-item" href="#">Training</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Careers</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Get Quotation</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- The Header end -->
+
+	<section id="portfolio-cvr">
+		<h2 class="about-txt-hr">Designer Title</h2>
+
+		<!-- start career detail -->
+		<div class="career-div">
+			<p>
+				Curabitur porta nibh ac ante lobortis vestibulum. Nam sem erat, accumsan in ligula sit amet, congue
+				tincidunt diam. Pellentesque blandit mi in commodo posuere. In velit massa, venenatis sit amet augue
+				vel, dictum molestie sapien. Maecenas vestibulum ipsum ut purus cursus rhoncus. Morbi a massa sem.
+				Mauris vel nibh ac est mattis pharetra. Mauris vel nunc lorem. Donec sodales mollis velit, non placerat
+				purus viverra
+			</p>
+			<hr>
+
+			<strong>Responsibilities</strong>
+			<ul>
+				<li>Bla bla bla</li>
+			</ul>
+		</div>
+		<!-- end career detail -->
+
+		<em>Send an email the role to {{preferred_email}}</em>
+
+	</section>
+
+
+	<style>
+		.career-div {
+			text-align: left;
+		}
+
+		a {
+			text-decoration: none;
+			color: #233343;
+		}
+
+		a:hover {
+			text-decoration: underline;
+			color: #168d6d;
+		}
+	</style>
+
+<!-- Footer start -->
+<footer class="py-3 my-4">
+	<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Facebook</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Instagram</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Twitter</a></li>
+	</ul>
+	<p class="text-center text-muted">© 2022 DENT CREATIVES, Inc</p>
+</footer>
+
+<!-- Bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+	crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+	$('.nav-link').mouseover(function () {
+		$('.nav-link').addClass('active');
+	});
+</script>
+
+</body>
+
+</html>
+
+<!-- Footer end -->
