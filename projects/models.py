@@ -13,6 +13,9 @@ class Sketch(models.Model):
 	project = models.ForeignKey(Project, on_delete=models.CASCADE)
 	image = models.ImageField(upload_to='images/')
 
+	class Meta:
+		verbose_name_plural='Sketches'
+
 class Image(models.Model):
 	project = models.ForeignKey(Project, on_delete=models.CASCADE)
 	image = models.ImageField(upload_to='images/')
