@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('dentcreatives.urls')),
     path('', include('projects.urls')),
-    path('',include('team.urls'))
+    path('',include('team.urls')),
+    path('',include('careers.urls'))
 ]
 
 

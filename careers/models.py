@@ -12,8 +12,8 @@ class Email(models.Model):
 		return self.email
 
 class Position(models.Model):
-	FULLTIME = 'FT'
-	PARTTIME = 'PT'
+	FULLTIME = 'Full-Time'
+	PARTTIME = 'Part-Time'
 	POSITIONTYPE = [
 		(FULLTIME,'Full-time'),
 		(PARTTIME,'Part-time'),
@@ -22,7 +22,7 @@ class Position(models.Model):
 	description = models.TextField()
 	slots = models.IntegerField()
 	type = models.CharField(
-		max_length=2,
+		max_length=10,
 		choices=POSITIONTYPE,
 		default=PARTTIME
 	)

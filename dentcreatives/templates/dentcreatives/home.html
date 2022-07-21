@@ -123,7 +123,9 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="portfolio-ctr">
-								<img src="{{project.cover_image.url}}"
+								<!-- <img src="{{project.cover_image.url}}"
+									alt="PortfolioAvatar" class="portfolio-img"> -->
+									<img src="{{project.cover_image.url}}"
 									alt="PortfolioAvatar" class="portfolio-img">
 								<div class="portfolio-overlay">
 									<div class="text">
@@ -141,6 +143,8 @@
 				{% endif %}
 				<!-- end of a single project -->
 				{% endfor %}
+				<br>
+
 				<div>
 					<a href="/projectsview" class="btn home-cvr-btn btn-secondary">View All Projects</a>
 				</div>
