@@ -1,9 +1,8 @@
 from django.urls import path
-
-from dentcreatives import views
-# from . import views
+from . import views
 
 
 urlpatterns = [
-	path('portfolio', views.portfolio,name='portfolio'),
+	path('projectsview', views.projectsview,name='projectsview'),
+	path('project/<int:project_id>', views.project,name='project')
 ]

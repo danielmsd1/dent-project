@@ -40,7 +40,7 @@
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
 					<li class="nav-item">
-						<a class="nav-link" href="/home">Home</a>
+						<a class="nav-link" href="#home-cvr">Home</a>
 					</li>
 
 					<li class="nav-item">
@@ -70,17 +70,22 @@
 		</div>
 	</nav>
 	<!-- The Header end -->
+
+	{% for homedetail in homedetail.all %}
 	<section id="home-cvr">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="home-col col-lg-6 col-md-12 col-sm-12">
-					<!-- <h1 class="home-cvr-h1">A Creative Design Studio.</h1> -->
-					<h1 class="home-cvr-h1">We are Creative.</h1>
+					<h1 class="home-cvr-h1">{{homedetail.title}}</h1>
 					<a href="#quotation-cvr" class="home-cvr-btn btn btn-secondary">Contact Us</a>
 				</div>
 
 				<div class="col-lg-6 col-md-12 col-sm-12">
+					{% if homedetail.cover_image %}
+					<img class="home-cvr-img" src="{{homedetail.cover_image.url}}" alt="" srcset="">
+					{% else %}
 					<img class="home-cvr-img" src="{% static 'images/dentcreativeslogo.svg' %}" alt="" srcset="">
+					{% endif %}
 				</div>
 
 			</div>
@@ -98,32 +103,33 @@
 
 	<section class="section-spacing" id="about-cvr">
 		<h2 class="about-txt-hr">About Us</h2>
-		Sed convallis vestibulum fringilla. Praesent erat augue, ullamcorper quis lacinia sit amet, rhoncus eu
-		tellus. Integer lacinia suscipit felis, eu porta ex efficitur id.
+		{{homedetail.about_text}}
 		<br>
 
 		<button class="about-btn home-cvr-btn btn btn-secondary">Our Team</button>
 
 	</section>
-
+	{% endfor %}
 
 	<section id="portfolio-cvr">
 		<h2 class="about-txt-hr">Portfolio</h2>
 		<div class="container-fluid">
 			<div class="row">
-
+				
+				{% for project in project.all %}
+				{% if forloop.counter <= 6 %}
 				<!-- start of a single project -->
 				<div class="portfolio-col col-lg-4 col-md-6 col-sm-12">
 					<div class="card">
 						<div class="card-body">
 							<div class="portfolio-ctr">
-								<img src="https://images.unsplash.com/photo-1657480194308-7752db5e21f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+								<img src="{{project.cover_image.url}}"
 									alt="PortfolioAvatar" class="portfolio-img">
 								<div class="portfolio-overlay">
 									<div class="text">
-										Farmers Software Society <br>
-										<a href="">
-											<button class="home-cvr-btn btn btn-secondary">View</button>
+										{{project.client}} <br>
+										<a href="{% url 'project' project.id %}" class="home-cvr-btn btn btn-secondary">
+											View
 										</a>
 									</div>
 								</div>
@@ -132,12 +138,11 @@
 						
 					</div>
 				</div>
-
-
+				{% endif %}
 				<!-- end of a single project -->
-
+				{% endfor %}
 				<div>
-					<a href="/portfolio" class="btn home-cvr-btn btn-secondary">View All Projects [20]</a>
+					<a href="/projectsview" class="btn home-cvr-btn btn-secondary">View All Projects</a>
 				</div>
 			</div>
 
@@ -189,16 +194,24 @@
 	</section>
 <!-- Contact end -->
 
+
+{% for social in social.all %}
 <!-- Footer start -->
 <footer class="py-3 my-4">
 	<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Facebook</a></li>
-		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Instagram</a></li>
-		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Twitter</a></li>
+		{% if social.facebook %}
+		<li class="nav-item"><a href="{{social.facebook}}" class="nav-link px-2 text-muted">Facebook</a></li>
+		{% endif %}
+		{% if social.instagram %}
+		<li class="nav-item"><a href="{{social.instagram}}" class="nav-link px-2 text-muted">Instagram</a></li>
+		{% endif %}
+		{% if social.twitter %}
+		<li class="nav-item"><a href="{{social.twitter}}" class="nav-link px-2 text-muted">Twitter</a></li>
+		{% endif %}
 	</ul>
 	<p class="text-center text-muted">© 2022 Dent Creatives, Inc</p>
 </footer>
-
+{% endfor %}
 <!-- Bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

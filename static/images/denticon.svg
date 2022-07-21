@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 3416.0701 4335.4399"
+   version="1.1"
+   sodipodi:docname="DentIcon-01.svg"
+   width="3416.0701"
+   height="4335.4399"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview58"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="3"
+     fit-margin-left="3"
+     fit-margin-right="3"
+     fit-margin-bottom="3"
+     lock-margins="true"
+     inkscape:showpageshadow="false"
+     inkscape:zoom="0.14033333"
+     inkscape:cx="983.37292"
+     inkscape:cy="2472.6841"
+     inkscape:window-width="1920"
+     inkscape:window-height="1046"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs7">
+    <style
+       id="style2">.cls-1{fill:none;}.cls-2{fill:#233343;}.cls-3{fill:#168d6d;}.cls-4{clip-path:url(#clip-path);}</style>
+    <clipPath
+       id="clip-path">
+      <rect
+         class="cls-1"
+         x="-5001.79"
+         y="-15.61"
+         width="4845.4902"
+         height="6015.6099"
+         id="rect4" />
+    </clipPath>
+  </defs>
+  <title
+     id="title9">DentIcon</title>
+  <g
+     id="g959"
+     transform="translate(-1178.61,-832.28)">
+    <path
+       class="cls-2"
+       d="M 3861.59,835.28 V 2274.41 Q 3672.31,2103.17 3413.93,1992 q -258.38,-111.17 -591.88,-111.17 -369.56,0 -673,129.19 -303.44,129.19 -518.27,353 -214.85,223.86 -332,522.78 -117.15,298.92 -117.17,638.44 0,339.55 120.19,638.45 120.19,298.9 336.5,521.31 216.3,222.39 521.27,351.51 304.97,129.12 674.5,129.21 174.19,0 330.48,-36.05 156.29,-36.05 294.45,-97.67 138.15,-61.53 253.88,-144.19 115.73,-82.66 208.8,-178.81 l 45.06,360.55 h 624.94 V 835.28 Z m -975,3795.19 c -610.93,0 -1106.19,-495.26 -1106.19,-1106.19 0,-610.93 495.26,-1106.19 1106.19,-1106.19 610.93,0 1106.2,495.25 1106.2,1106.19 0,610.94 -495.21,1106.19 -1106.15,1106.19 z"
+       id="path11" />
+    <circle
+       class="cls-3"
+       cx="2886.6399"
+       cy="3524.28"
+       r="682.01001"
+       id="circle13" />
+  </g>
+  <metadata
+     id="metadata875">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>DentIcon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

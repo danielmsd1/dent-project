@@ -1,9 +1,15 @@
 from django.shortcuts import render
-
+from .models import HomeDetail,Social
 # Create your views here.
+from projects.models import Project
+
 def home(request):
-	return render(request,'dentcreatives/learning.html')
+	homedetail = HomeDetail.objects
+	social = Social.objects
+	project = Project.objects
 
-
-def portfolio(request):
-	return render(request,'dentcreatives/projectsview.html')
+	return render(request,'dentcreatives/home.html',{
+		'homedetail':homedetail,
+		'social':social,
+		'project':project,
+		})

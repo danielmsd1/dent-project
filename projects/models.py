@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Project(models.Model):
 	client = models.CharField(max_length=200,unique=True)
+	description = models.TextField()
 	complete = models.BooleanField(default=False)
 	cover_image = models.ImageField(upload_to='images/')
 
