@@ -5,6 +5,7 @@ class Program(models.Model):
 	name = models.CharField(max_length=200, unique=True)
 	program_fee = models.CharField(max_length=200)
 	duration = models.CharField(max_length=200)
+	description = models.TextField()
 	cover_image = models.ImageField(upload_to='images/')
 
 	def __str__(self):
