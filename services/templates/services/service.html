@@ -28,7 +28,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg bg-light fixed-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{% url 'home' %}">
 				<img src="{% static 'images/dentcreativeslogo.svg' %}" alt="dentcreativeslogo" height="45px">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,11 +40,11 @@
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
 					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
+						<a class="nav-link" href="{% url 'home' %}">Home</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="#">Portfolio</a>
+						<a class="nav-link" aria-current="page" href="/projectsview">Portfolio</a>
 					</li>
 
 					<li class="nav-item dropdown">
@@ -53,53 +53,65 @@
 							Services
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Graphic Design</a></li>
-							<li><a class="dropdown-item" href="#">Motion Graphics</a></li>
-							<li><a class="dropdown-item" href="#">Training</a></li>
+
+							<!-- Start Services -->
+							{% for service in service.all %}
+							<li><a class="dropdown-item" href="{% url 'service' service.id %}">{{service.name}}</a></li>
+							{% endfor %}
+							<!-- End Services -->
+
+							<li><a class="dropdown-item" href="{% url 'learning' %}">Training</a></li>
 							<li>
 								<hr class="dropdown-divider">
 							</li>
-							<li><a class="dropdown-item" href="#">Careers</a></li>
+							<li><a class="dropdown-item" href="{% url 'careersview' %}">Careers</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Get Quotation</a>
+						<a class="nav-link" href="/home#quotation-cvr">Get Quotation</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- The Header end -->
-
+	
+	{% for service in service.all %}
+	{% if serviceid.id == service.id %}
 	<section id="portfolio-cvr">
-		<h2 class="about-txt-hr">Graphic Design</h2>
+		<h2 class="about-txt-hr">{{service.name}}</h2>
 
 		<div class="container-fluid">
+
+			{% for detail in detail.all %}
+			{% if detail.service.name == service.name %}
 			<div class="row">
 				<div class="col-lg-5">
 					<hr>
-					
-					<p class="project-description">
-						
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc ipsum, euismod in volutpat
-						et, rutrum eget libero. Pellentesque non lorem eu felis consectetur dictum suscipit eget libero.
-						In sit amet tristique nibh. Praesent malesuada dui in augue rhoncus faucibus. Aliquam consequat
-						justo sit amet felis aliquam, volutpat tempus risus iaculis. Fusce sagittis vitae elit et
-						commodo. Fusce eu tellus dictum, aliquam lectus efficitur, sollicitudin lacus.
+					<p class="project-description">	
+						{{detail.description}}					
 						<br>
 						<button class="about-btn home-cvr-btn btn btn-secondary">Get Started</button>
 					
 					</p>
+					
 				</div>
 
 				<div class="col-lg-7">
 					<div class="portfolio-ctr-logo">
-						<img src="images/dentcreativeslogo.svg"
+						{% if detail.cover_image %}
+						<img src="{{detail.cover_image.url}}"
+							alt="PortfolioAvatar" class="pcvr-img">
+						{% else %}
+						<img src="{% static 'images/dentcreativeslogo.svg' %}"
 							alt="PortfolioAvatar" class="portfolio-img">
+						{% endif %}
 					</div>
 				</div>
 
 			</div>
+			{% endif %}
+			{% endfor %}
 
 		</div>
 		<!-- Contact start -->
@@ -149,7 +161,8 @@
 
 		<!-- Contact end -->
 	</section>
-
+	{% endif %}
+	{% endfor %}
 
 	<style>
 		.portfolio-ctr {
@@ -181,19 +194,34 @@
 			border-radius: 15px 5px;
 			border: 2px 0 0 1px;
 		}
+		.pcvr-img{
+			width: 100%;
+			/* max-height: 300px; */
+			overflow: hidden;
+			border: 1px solid;
+			border-radius: 10px;
+			padding: 10px;
+		}
 	</style>
 
 
+{% for social in social.all %}
 <!-- Footer start -->
 <footer class="py-3 my-4">
 	<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Facebook</a></li>
-		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Instagram</a></li>
-		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Twitter</a></li>
+		{% if social.facebook %}
+		<li class="nav-item"><a href="{{social.facebook}}" class="nav-link px-2 text-muted">Facebook</a></li>
+		{% endif %}
+		{% if social.instagram %}
+		<li class="nav-item"><a href="{{social.instagram}}" class="nav-link px-2 text-muted">Instagram</a></li>
+		{% endif %}
+		{% if social.twitter %}
+		<li class="nav-item"><a href="{{social.twitter}}" class="nav-link px-2 text-muted">Twitter</a></li>
+		{% endif %}
 	</ul>
-	<p class="text-center text-muted">© 2022 DENT CREATIVES, Inc</p>
+	<p class="text-center text-muted">© 2022 Dent Creatives, Inc</p>
 </footer>
-
+{% endfor %}
 <!-- Bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

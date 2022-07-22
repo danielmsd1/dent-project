@@ -53,13 +53,18 @@
 							Services
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Graphic Design</a></li>
-							<li><a class="dropdown-item" href="#">Motion Graphics</a></li>
-							<li><a class="dropdown-item" href="#">Training</a></li>
+
+							<!-- Start Services -->
+							{% for service in service.all %}
+							<li><a class="dropdown-item" href="{% url 'service' service.id %}">{{service.name}}</a></li>
+							{% endfor %}
+							<!-- End Services -->
+
+							<li><a class="dropdown-item" href="{% url 'learning' %}">Training</a></li>
 							<li>
 								<hr class="dropdown-divider">
 							</li>
-							<li><a class="dropdown-item" href="#">Careers</a></li>
+							<li><a class="dropdown-item" href="{% url 'careersview' %}">Careers</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
@@ -70,6 +75,7 @@
 		</div>
 	</nav>
 	<!-- The Header end -->
+	
 	{% for project in project.all %}
 	{% if project1.id == project.id %}
 	<section id="portfolio-cvr">

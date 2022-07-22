@@ -2,20 +2,22 @@ from django.db import models
 
 # Create your models here.
 class Service(models.Model):
-	GRAPHICDESIGN = 'GD'
-	MOTIONGRAPHICS = 'MG'
-	SERVICES_OPTION = [
-		(GRAPHICDESIGN,'Graphic Design'),
-		(MOTIONGRAPHICS,'Motion Graphics')
-	]
-	name_of_service = models.CharField(
-		max_length=2,
-		choices=SERVICES_OPTION,
+	name = models.CharField(
+		max_length=200,
 		unique=True,
 	)
-	service_text = models.TextField()
-	service_cover_image = models.ImageField(upload_to='images/', blank=True, null=True)
-
 
 	def __str__(self) -> str:
-		return self.name_of_service
+		return self.name
+
+
+class Detail(models.Model):
+	service = models.ForeignKey(Service,on_delete=models.CASCADE)
+	description = models.TextField()
+	cover_image = models.ImageField(upload_to='images/',blank=True,null=True)
+
+	def __str__(self) -> str:
+		return self.description
+
+	class Meta:
+		verbose_name_plural='Service Details'

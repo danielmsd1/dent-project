@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Header,Member
 from dentcreatives.models import Social
+from services.models import Service
 
 # Create your views here.
 def team(request):
@@ -8,4 +9,5 @@ def team(request):
 		'header': Header.objects,
 		'member': Member.objects,
 		'social':Social.objects,
+		'service':Service.objects,
 	})

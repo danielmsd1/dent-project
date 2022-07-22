@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Project,Sketch,Image,Video
 from dentcreatives.models import Social
+from services.models import Service
 # Create your views here.
 
 def projectsview(request):
@@ -25,5 +26,6 @@ def project(request,project_id):
 		'sketch':sketch,
 		'image':image,
 		'video':video,
-		'project1':project_detail
+		'project1':project_detail,
+		'service':Service.objects,
 	})
