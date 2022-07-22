@@ -10,6 +10,7 @@ def projectsview(request):
 	return render(request,'projects/projectsview.html',{
 		'project':project,
 		'social':social,
+		'service':Service.objects,
 		})
 
 
