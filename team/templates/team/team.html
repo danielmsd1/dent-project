@@ -125,11 +125,13 @@
 								<div class="col-12">
 									{{member.position}}
 								</div>
-								<div class="col-12">
+
+								<div class="outer-social">
+								<div class="social-icons col-12">
 									<div class="row">
 										
 										{% if member.twitter %}
-										<div class="col">
+										<div class="col-4">
 											<a href="{{member.twitter}}">
 												<i class="portfolio-fa-solid fa-brands fa-twitter fa-2x"></i>
 											</a>
@@ -137,7 +139,7 @@
 										{% endif %}
 
 										{% if member.instagram %}
-										<div class="col">
+										<div class="col-4">
 											<a href="{{member.instagram}}">
 												<i class="portfolio-fa-solid fa-brands fa-instagram fa-2x"></i>
 											</a>
@@ -145,13 +147,14 @@
 										{% endif %}
 
 										{% if member.linkedin %}
-										<div class="col">
+										<div class="col-4">
 											<a href="{{member.linkedin}}">
 												<i class="portfolio-fa-solid fa-brands fa-linkedin-in fa-2x"></i>
 											</a>
 										</div>
 										{% endif %}						
 									</div>
+								</div>
 								</div>
 							</div>
 						</div>
@@ -181,6 +184,13 @@
 		}
 		.dclogo{
 			padding: 20px;
+		}
+		.social-icons{
+			width: 50%;
+		}
+		.outer-social{
+			display: flex;
+			justify-content: center;
 		}
 	</style>
 
