@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'careers',
     'team',
     'services',
-    'training'
+    'training',
+    'contact',
 ]
 
 MIDDLEWARE = [
