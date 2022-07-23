@@ -141,47 +141,50 @@
 
 		</div>
 
-						<!-- Contact start -->
+	<!-- Contact start -->
 	<section id="quotation-cvr">
 		<h2 class="about-txt-hr">Contact Us</h2>
 	
-		<form class="quotation-form" action="" method="post">
+		<form class="quotation-form" action="/home" method="post">
+			{% csrf_token %}
 			<div class="container-fluid">
 				<div class="row">
+
 					<div class="col-lg-6">
 						<label for="name"></label>
 						<input class="form-control" type="text" name="name" id="" placeholder="Your Name*" required>
 					</div>
+
 					<div class="col-lg-6">
 						<label for="emailAddress"></label>
 						<input class="form-control" type="email" name="emailAddress" id="" placeholder="Email Address*"
 							required>
 					</div>
-					<div class="col-lg-12">
+
+					<div class="select-sct col-lg-12">
 						<div class="input-group">
-							<select class=" form-control" id="inputGroupSelect04">
-								<!-- <option selected>How can we help? <i class="fa-solid fa-circle-chevron-down"></i> -->
-								<!-- </option> -->
-								<option value="1">Graphic Design</option>
-								<option value="2">Motion Graphics</option>
-								<option value="3">Training</option>
-								<option value="3">Other</option>
+							<!-- <label for="reason">Which Team would you like to address?*: </label> -->
+							<select class="form-control" name='reason' id="reason">
+								{% for service in service.all %}
+								<option value="{{service.name}}">{{service.name}}</option>
+								{% endfor %}
+								<option value="training">Training</option>
+								<option value="other">Other</option>
 							</select>
 						</div>
 					</div>
 	
 					<div class="col-lg-12">
 						<label for="detail"></label>
-						<textarea class="form-control" name="detail" id="" cols="30" rows="10"
-							placeholder="Additional detail, website, etc" required></textarea>
-	
-	
+						<textarea class="form-control" name="detail" id="detail" cols="30" rows="10"
+							placeholder="Additional detail, website, etc*" required></textarea>
 						<button type="submit" class="contact-btn home-cvr-btn btn btn-secondary">Contact Us</button>
 					</div>
 	
 				</div>
 			</div>
 		</form>
+		<h5 class="contact-feedback">{{feedback}}</h5>
 	
 	</section>
 <!-- Contact end -->
