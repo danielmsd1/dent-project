@@ -4,3 +4,5 @@ from .models import HomeDetail,Social
 # Register your models here.
 admin.site.register(HomeDetail)
 admin.site.register(Social)
+
+admin.site.site_header='Login'
