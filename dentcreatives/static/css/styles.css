@@ -216,11 +216,16 @@ textarea {
 }
 /* handles the bootstrap top spacing */
 @media (max-width: 979px) {
+	#home-cvr {
+		height: auto;
+		text-align: center;	
+	}
+	#about-cvr{
+		text-align: left;
+		height: auto;
+		margin: 2% 13%;
+	}
 	body {
 		padding-top: 65px;
-	}
-	#home-cvr {
-		height: 70vh;
-		text-align: center;
 	}
 }
