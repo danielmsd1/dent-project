@@ -8,8 +8,14 @@ class HomeDetail(models.Model):
 
 	def __str__(self):
 		return self.title
+	
+	class Meta:
+		verbose_name_plural='Home Details'
 
 class Social(models.Model):
 	facebook = models.URLField(blank=True, null=True)
 	instagram = models.URLField(blank=True, null=True)
 	twitter = models.URLField(blank=True, null=True)
+
+	class Meta:
+		verbose_name_plural='Social Media'
