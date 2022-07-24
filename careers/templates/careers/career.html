@@ -8,7 +8,11 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dent Creatives</title>
+		{% for position in position.all %}
+		{% if careerid.id == position.id %}
+		<title>Dent Creatives | {{position.title}}</title>
+		{% endif %}
+		{% endfor %}
 		<link rel="shortcut icon" href="{% static 'images/denticon.svg' %}" type="image/x-icon">
 		<!-- Bootstrap CSS -->
 		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
