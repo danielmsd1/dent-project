@@ -22,7 +22,7 @@ textarea {
 
 #home-cvr {
 	margin: 2% 15%;
-	height: 80vh;
+	/* height: 80vh; */
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -30,7 +30,7 @@ textarea {
 
 #about-cvr {
 	margin: 2% 26%;
-	height: 50vh;
+	/* height: 50vh; */
 	text-align: center;
 }
 
@@ -216,11 +216,15 @@ textarea {
 }
 /* handles the bootstrap top spacing */
 @media (max-width: 979px) {
-	body {
-		padding-top: 65px;
-	}
 	#home-cvr {
-		height: 70vh;
+		height: auto;
 		text-align: center;
+	}
+	#about-cvr{
+		margin: 2% 13%;
+		height: auto;
+	}
+	#portfolio-cvr{
+		background-color: #233343;
 	}
 }
