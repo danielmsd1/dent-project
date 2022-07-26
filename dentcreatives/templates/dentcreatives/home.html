@@ -134,8 +134,6 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="portfolio-ctr">
-								<!-- <img src="{{project.cover_image.url}}"
-									alt="PortfolioAvatar" class="portfolio-img"> -->
 									<img src="{{project.cover_image.url}}"
 									alt="PortfolioAvatar" class="portfolio-img">
 								<div class="portfolio-overlay">
@@ -186,7 +184,6 @@
 
 					<div class="select-sct col-lg-12">
 						<div class="input-group">
-							<!-- <label for="reason">Which Team would you like to address?*: </label> -->
 							<select class="form-control" name='reason' id="reason">
 								{% for service in service.all %}
 								<option value="{{service.name}}">{{service.name}}</option>
@@ -211,6 +208,72 @@
 	
 	</section>
 <!-- Contact end -->
+
+<style>
+	.home-cvr-cvr{
+		height: 100vh;
+	background: url("{% static 'images/background.jpg' %}") no-repeat center center; 
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+}
+/* .portfolio-ctr{
+	background: url("{% static 'images/background.jpg' %}") no-repeat center center; 
+} */
+body{
+	padding-top: 0;
+}
+.scroller{
+	background-color: #233343;
+}
+.mousey{
+	background-color: #ffffff;
+}
+.home-cvr-h1{
+	color: #ffffff;
+}
+@media (max-width: 997px) {
+	.home-cvr-img{
+		display: none;
+	}
+	.home-cvr-cvr{
+	height: 50vh;
+	/* background: url("{% static 'images/background.jpg' %}") no-repeat center center;  */
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+}
+body{
+	padding-top: 65px;
+}
+.scroll-downs {
+	margin: auto;
+	margin-top: 50px;
+	width: 34px;
+	height: 55px;
+}
+@media only screen and (min-width: 979px) and (max-width: 997px) {
+	body{
+	padding-top: 0;
+}
+.home-cvr-cvr{
+	height: auto;
+	align-items: center;
+}
+#home-cvr{
+	text-align: center;
+}
+.scroll-downs {
+	margin: auto;
+	margin-top: 100px;
+	width: 34px;
+	height: 55px;
+}
+
+}
+}
+</style>
+
 
 {% for social in social.all %}
 <!-- Footer start -->
