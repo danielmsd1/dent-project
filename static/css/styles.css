@@ -6,6 +6,7 @@ body {
 	padding-top: 65px;
 }
 
+
 ::selection {
 	background-color: #168D6D;
 	color: #FFFFFF;
@@ -21,8 +22,9 @@ textarea {
 }
 
 #home-cvr {
+	padding-top: 65px;
 	margin: 2% 15%;
-	height: 80vh;
+	height: 100vh;
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -30,8 +32,9 @@ textarea {
 
 #about-cvr {
 	margin: 2% 26%;
-	height: 50vh;
+	/* height: 50vh; */
 	text-align: center;
+	padding-bottom: 50px;
 }
 
 #portfolio-cvr {
@@ -152,8 +155,10 @@ textarea {
 .portfolio-ctr {
 	position: relative;
 	width: 100%;
-	background-image: -webkit-linear-gradient(right, transparent 0%, #118a67 15%, #233343 85%, transparent 90%);
-	background-image: linear-gradient(left, transparent 0%, #233343 15%, #118a67 85%, transparent 90%);
+	/* border: 1px solid; */
+	/* background: url('../images/background.jpg') no-repeat center center;  */
+	/* background-image: -webkit-linear-gradient(right, transparent 0%, #118a67 15%, #233343 85%, transparent 90%); */
+	/* background-image: linear-gradient(left, transparent 0%, #233343 15%, #118a67 85%, transparent 90%); */
 }
 
 .portfolio-img {
@@ -218,11 +223,12 @@ textarea {
 @media (max-width: 979px) {
 	#home-cvr {
 		height: auto;
-		text-align: center;
+		text-align: center;	
 	}
 	#about-cvr{
-		margin: 2% 13%;
+		text-align: left;
 		height: auto;
+		margin: 2% 13%;
 	}
 	body {
 		padding-top: 65px;

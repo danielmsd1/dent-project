@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dentdb',
         'USER': 'postgres',
-        'PASSWORD': 'Qwetu8934',
+        'PASSWORD': '**********',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
